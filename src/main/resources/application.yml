@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: binance-price-tracker
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://127.0.0.1:5432/cryptodb}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  flyway:
+    enabled: true
+
+binance:
+  api:
+    base-url: "https://api.binance.com"
+    connect-timeout-ms: 3000
+    read-timeout-ms: 5000
+  default-symbol: "BNBUSDT"
+  poll:
+    interval: ${BINANCE_POLL_INTERVAL:PT30S}

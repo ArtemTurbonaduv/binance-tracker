@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/cryptodb
+    username: postgres
+    password: postgres
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+binance:
+  api:
+    base-url: http://localhost:8089
+    connect-timeout-ms: 1000
+    read-timeout-ms: 1000
+  default-symbol: BNBUSDT
