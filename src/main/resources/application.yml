@@ -17,7 +17,7 @@ spring:
 
 binance:
   api:
-    base-url: "https://api.binance.com"
+    base-url: ${BINANCE_API_BASE_URL:https://data-api.binance.vision}
     connect-timeout-ms: 3000
     read-timeout-ms: 5000
   default-symbol: "BNBUSDT"
